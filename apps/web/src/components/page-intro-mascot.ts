@@ -15,6 +15,7 @@ const byPath: [RegExp, CupidVariant][] = [
   [/^\/eventos-privados$/, 'embrace'],
   [/^\/(en\/)?(parceiros|partners)$/, 'mark'],
   [/^\/en\/private-network$/, 'search'],
+  [/^\/(en\/)?(academia|academy)$/, 'search'],
 ];
 
 export function mascotFor(pathname: string): CupidVariant | null {

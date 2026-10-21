@@ -108,6 +108,7 @@ export const enNavigation = [
   { label: 'How it works', href: '/en/how-it-works' },
   { label: 'Services', href: '/en/services' },
   { label: 'Private network', href: '/en/private-network' },
+  { label: 'Academy', href: '/en/academy' },
   { label: 'Journal', href: '/en/journal' },
   { label: 'Trust', href: '/en/trust-privacy' },
   { label: 'FAQ', href: '/en/faq' },

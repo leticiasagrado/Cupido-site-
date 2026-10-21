@@ -6,6 +6,7 @@ import {
   Hero2026,
   ValuesMarquee,
   PromoStrip,
+  AcademyTeaser,
   FinalInvite2026,
 } from '@/components/home26/home-2026';
 import type { Route } from './+types/en.home';
@@ -31,6 +32,7 @@ export default function EnHomePage() {
       <Hero2026 campaign={campaign} lang="en" />
       <ValuesMarquee lang="en" />
       <PromoStrip campaign={campaign} lang="en" />
+      <AcademyTeaser lang="en" />
       <FinalInvite2026 campaign={campaign} lang="en" />
     </main>
   );

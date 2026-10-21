@@ -26,6 +26,7 @@ export const navigation = [
   { label: 'O nosso método', href: '/o-nosso-metodo' },
   { label: 'Serviços', href: '/servicos' },
   { label: 'Rede privada', href: '/rede-privada' },
+  { label: 'Academia', href: '/academia' },
   { label: 'Journal', href: '/journal' },
   { label: 'Confiança', href: '/confianca-privacidade' },
   { label: 'FAQ', href: '/perguntas-frequentes' },

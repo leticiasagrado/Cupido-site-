@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router';
-import { Users, HeartHandshake, Stethoscope, ShieldCheck, Sparkles } from 'lucide-react';
+import { Users, HeartHandshake, Stethoscope, ShieldCheck, Sparkles, GraduationCap } from 'lucide-react';
 
 const adminLinks = [
   { to: '/admin/rede-privada', label: 'Rede Privada', icon: Users },
@@ -7,6 +7,7 @@ const adminLinks = [
   { to: '/admin/colaboracao-psicologas', label: 'Colaboração', icon: Stethoscope },
   { to: '/admin/pedidos-privacidade', label: 'Pedidos de Privacidade', icon: ShieldCheck },
   { to: '/admin/campanha', label: 'Campanha', icon: Sparkles },
+  { to: '/admin/academia', label: 'Academia', icon: GraduationCap },
 ];
 
 export function AdminNav() {

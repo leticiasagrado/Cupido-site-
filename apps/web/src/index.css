@@ -1336,3 +1336,65 @@ a.h26-card:hover, .h26-card:hover { transform: translateY(-6px); box-shadow: 0 3
   .h26-promo-cupid.cupid-art { width: 120px; height: 120px; }
   .h26-promo-cta { justify-self: start; }
 }
+
+/* ==========================================================================
+   The Cupid Academy
+   ========================================================================== */
+.academy-eyebrow { color: var(--burgundy); display: block; margin-bottom: 14px; }
+.academy-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.academy-card { display: flex; flex-direction: column; gap: 14px; padding: 28px 26px; border-radius: 28px; background: #fff; border: 1px solid rgba(110,22,36,.1); transition: transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s; }
+.academy-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -28px rgba(110,22,36,.4); }
+.academy-card.is-featured { background: var(--burgundy); color: var(--cream); border-color: var(--burgundy); }
+.academy-card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: var(--burgundy); }
+.academy-card.is-featured .academy-card-top { color: var(--blush); }
+.academy-soon { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--cream); color: var(--burgundy); white-space: nowrap; }
+.academy-card h3 { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1; letter-spacing: -.02em; }
+.academy-card p { font-size: 13px; line-height: 1.65; color: #5c4f48; }
+.academy-card.is-featured p { color: rgba(246,238,227,.85); }
+.academy-meta { margin-top: auto; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 13px; }
+.academy-meta strong { font-family: var(--display); font-weight: 400; font-size: 40px; line-height: 1; }
+.academy-notify { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: var(--cream); color: var(--burgundy); font-size: 13px; font-weight: 700; transition: background .3s, color .3s; }
+.academy-notify:hover { background: var(--burgundy); color: var(--cream); }
+.academy-card.is-featured .academy-notify:hover { background: var(--blush); color: var(--burgundy); }
+.academy-products { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 50px; align-items: start; }
+.academy-products h2, .academy-form-intro h2, .h26-academy-teaser strong { font-family: var(--display); font-weight: 400; letter-spacing: -.035em; line-height: 1; }
+.academy-products h2 { font-size: clamp(40px, 4.4vw, 60px); }
+.academy-products-cupid.cupid-art { width: 200px; height: auto; margin-top: 30px; mix-blend-mode: normal; }
+.academy-product-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.academy-product-list li { display: grid; grid-template-columns: minmax(0,1fr) auto auto; gap: 16px; align-items: center; padding: 16px 16px 16px 22px; border-radius: 20px; background: #fff; border: 1px solid rgba(110,22,36,.08); font-size: 14px; }
+.academy-product-list strong { font-family: var(--display); font-weight: 400; font-size: 26px; color: var(--burgundy); white-space: nowrap; }
+.academy-band { margin: 70px 0 0; padding: 26px 16px; text-align: center; background: var(--burgundy); color: var(--cream); font-family: var(--display); font-style: italic; font-size: clamp(24px, 3vw, 36px); }
+.academy-disclaimer { display: flex; gap: 18px; align-items: flex-start; padding: 26px 28px; border-radius: 24px; background: #fff; border: 1px dashed rgba(110,22,36,.3); color: #5c4f48; }
+.academy-disclaimer svg { color: var(--burgundy); flex-shrink: 0; margin-top: 2px; }
+.academy-disclaimer strong { display: block; color: var(--burgundy); margin-bottom: 6px; }
+.academy-disclaimer p { font-size: 13px; line-height: 1.7; }
+.academy-form-wrap { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 50px; padding: 48px; border-radius: 36px; background: #fff; border: 1px solid rgba(110,22,36,.08); box-shadow: 0 30px 70px -50px rgba(110,22,36,.45); }
+.academy-form-intro h2 { font-size: clamp(40px, 4.4vw, 60px); margin-bottom: 18px; }
+.academy-form-intro p { color: #5c4f48; font-size: 14px; line-height: 1.7; }
+.academy-form { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.academy-form input:not([type="checkbox"]), .academy-form select, .academy-form textarea { width: 100%; padding: 13px 15px; border: 1px solid var(--line); background: var(--cream); font-size: 14px; }
+.academy-submit { justify-self: start; border: 0; cursor: pointer; }
+.academy-success { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.academy-success-cupid.cupid-art { width: 150px; height: auto; mix-blend-mode: normal; }
+.academy-success h3 { font-family: var(--display); font-weight: 400; font-size: 36px; line-height: 1.05; color: var(--burgundy); }
+.academy-admin-counts { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.academy-admin-counts button { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font-size: 12px; }
+.academy-admin-counts button.is-active { background: var(--burgundy); color: var(--cream); border-color: var(--burgundy); }
+
+/* Homepage teaser */
+.h26-academy-teaser-section { padding-top: 16px; }
+.h26-academy-teaser { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; padding: 22px 28px; border-radius: 28px; background: var(--blush); color: #3a0b13; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.h26-academy-teaser:hover { transform: translateY(-3px); }
+.h26-academy-new { padding: 4px 12px; border-radius: 999px; background: var(--burgundy); color: var(--cream); font-size: 12px; font-weight: 800; }
+.h26-academy-copy { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 4px; }
+.h26-academy-copy strong { font-size: 30px; }
+.h26-academy-copy > span { font-size: 14px; }
+.h26-academy-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
+
+@media (max-width: 900px) {
+  .academy-grid, .academy-products, .academy-form-wrap, .academy-form { grid-template-columns: 1fr; }
+  .academy-form-wrap { padding: 26px 20px; border-radius: 28px; gap: 26px; }
+  .academy-product-list li { grid-template-columns: minmax(0,1fr) auto; }
+  .academy-product-list .academy-notify { grid-column: 1 / -1; justify-self: start; }
+  .academy-products-cupid.cupid-art { width: 140px; }
+}

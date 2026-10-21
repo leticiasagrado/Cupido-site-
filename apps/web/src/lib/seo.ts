@@ -25,6 +25,7 @@ const PT_TO_EN: Record<string, string> = {
 	'/como-funciona': '/en/how-it-works',
 	'/servicos': '/en/services',
 	'/rede-privada': '/en/private-network',
+	'/academia': '/en/academy',
 	'/parceiros': '/en/partners',
 	'/journal': '/en/journal',
 	'/confianca-privacidade': '/en/trust-privacy',

@@ -440,3 +440,19 @@ export function PromoStrip({ campaign, lang }: { campaign: CampaignInfo; lang: L
     </section>
   );
 }
+
+export function AcademyTeaser({ lang }: { lang: Lang }) {
+  const isEn = lang === 'en';
+  return (
+    <section className="h26-section h26-academy-teaser-section">
+      <Link className="h26-academy-teaser h26-reveal" to={isEn ? '/en/academy' : '/academia'} data-cta="academy-teaser">
+        <span className="h26-academy-new">{isEn ? 'New' : 'Novo'}</span>
+        <span className="h26-academy-copy">
+          <strong>The Cupid Academy</strong>
+          <span>{isEn ? 'Courses to nurture confidence and relationships.' : 'Cursos para cultivar a confiança e as relações.'}</span>
+        </span>
+        <span className="h26-academy-link">{isEn ? 'See courses' : 'Ver cursos'} <ArrowRight size={16} aria-hidden="true" /></span>
+      </Link>
+    </section>
+  );
+}

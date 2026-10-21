@@ -7,6 +7,7 @@ import {
   Hero2026,
   ValuesMarquee,
   PromoStrip,
+  AcademyTeaser,
   FinalInvite2026,
 } from '@/components/home26/home-2026';
 
@@ -34,6 +35,7 @@ export default function HomePage() {
       <Hero2026 campaign={campaign} lang="pt" />
       <ValuesMarquee lang="pt" />
       <PromoStrip campaign={campaign} lang="pt" />
+      <AcademyTeaser lang="pt" />
       <FinalInvite2026 campaign={campaign} lang="pt" />
     </main>
   );
