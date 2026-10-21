@@ -1,0 +1,49 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.web
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      POCKETBASE_URL: http://pocketbase:8090
+      PB_SUPERUSER_EMAIL: ${PB_SUPERUSER_EMAIL}
+      PB_SUPERUSER_PASSWORD: ${PB_SUPERUSER_PASSWORD}
+    depends_on:
+      - pocketbase
+
+  pocketbase:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.pocketbase
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PB_SUPERUSER_EMAIL: ${PB_SUPERUSER_EMAIL}
+      PB_SUPERUSER_PASSWORD: ${PB_SUPERUSER_PASSWORD}
+      PB_ENCRYPTION_KEY: ${PB_ENCRYPTION_KEY}
+      ADMIN_INITIAL_PASSWORD: ${ADMIN_INITIAL_PASSWORD:-}
+    volumes:
+      - pb_data:/pb/pb_data
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+      PB_DOMAIN: ${PB_DOMAIN}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+      - pocketbase
+
+volumes:
+  pb_data:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,14 @@
+# HTTPS certificates are issued automatically for both domains.
+{$DOMAIN}, www.{$DOMAIN} {
+	encode zstd gzip
+	# The site's browser code reaches PocketBase through this path.
+	handle_path /hcgi/platform/* {
+		reverse_proxy pocketbase:8090
+	}
+	reverse_proxy web:3000
+}
+
+# PocketBase dashboard (all data, SMTP settings, backups).
+{$PB_DOMAIN} {
+	reverse_proxy pocketbase:8090
+}

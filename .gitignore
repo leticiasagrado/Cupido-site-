@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+apps/pocketbase/pb_data/
+.DS_Store
