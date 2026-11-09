@@ -1185,7 +1185,7 @@ span.h26-badge { padding: 8px 14px; font-family: var(--annotation); font-size: 1
 .h26-trust li { display: flex; align-items: center; gap: 8px; }
 .h26-trust li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--burgundy); }
 .h26-hero-art { position: relative; height: clamp(420px, 46vw, 620px); }
-.h26-blob { position: absolute; inset: 4% 6%; background: var(--blush); }
+.h26-blob { position: absolute; inset: 4% 6%; background: #fff; border: 1px solid rgba(110,22,36,.08); box-shadow: 0 24px 60px rgba(110,22,36,.08); }
 .h26-ring { position: absolute; right: 2%; top: 2%; width: clamp(100px, 11vw, 150px); height: auto; }
 .h26-ring text { font-family: var(--annotation); font-size: 13px; letter-spacing: 4px; fill: var(--burgundy); }
 .h26-hero-cupid.cupid-art { position: absolute; left: 12%; top: 4%; width: 76%; height: 82%; object-fit: contain; mix-blend-mode: normal; filter: drop-shadow(0 30px 40px rgba(110,22,36,.25)); }
